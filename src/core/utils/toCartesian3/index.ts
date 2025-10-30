@@ -1,6 +1,7 @@
-import { type MaybeCoordinates, normalizeCoordinates } from '~shared/coordinate'
-import { isUndefined } from '~shared/general'
+import type { MaybeCoordinates } from '~shared/coordinate'
 import * as Cesium from 'cesium'
+import { normalizeCoordinates } from '~shared/coordinate'
+import { isUndefined } from '~shared/general'
 
 type NumberOrString = number | string
 

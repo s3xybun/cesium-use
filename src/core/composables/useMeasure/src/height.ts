@@ -1,6 +1,7 @@
-import { at } from '~shared/general'
+import type { Ref, ShallowRef } from 'vue'
 import * as Cesium from 'cesium'
-import { computed, ref, type Ref, shallowRef, type ShallowRef, watch } from 'vue'
+import { computed, ref, shallowRef, watch } from 'vue'
+import { at } from '~shared/general'
 import { defineColor, editEntity, projectionPosition, syncEntityCollection, toCoordinates, useEventHandler, useViewer } from '~/index'
 import { pickPosition as _pickPosition } from '../utils'
 

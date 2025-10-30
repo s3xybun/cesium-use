@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import * as Cesium from 'cesium'
 import { ref } from 'vue'
-import 'cesium/Build/Cesium/Widgets/widgets.css'
-
 // @ts-expect-error - not in includes
 import { useViewerProvider } from '~composables/useViewer'
+
+import 'cesium/Build/Cesium/Widgets/widgets.css'
 
 const container = ref<HTMLDivElement>()
 const { isMounted } = useViewerProvider(() => {

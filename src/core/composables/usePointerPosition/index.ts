@@ -1,7 +1,7 @@
 import { makeDestructurable, useThrottleFn } from '@vueuse/core'
-import { useViewer } from '~composables/useViewer'
 import * as Cesium from 'cesium'
 import { ref } from 'vue'
+import { useViewer } from '~composables/useViewer'
 import { useEventHandler } from '~/index'
 
 export interface UsePointerPositionOptions {

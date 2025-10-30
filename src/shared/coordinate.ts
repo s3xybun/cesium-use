@@ -4,13 +4,13 @@ import { isUndefined } from '~shared/general'
 /**
  * `[longitude, latitude, height]` or `{ longitude, latitude, height }`
  */
-export type MaybeCoordinates =
-  | (number | string)[]
-  | {
-    longitude: number | string
-    latitude: number | string
-    height?: number | string
-  }
+export type MaybeCoordinates
+  = | (number | string)[]
+    | {
+      longitude: number | string
+      latitude: number | string
+      height?: number | string
+    }
 
 export function normalizeCoordinates(source: MaybeCoordinates) {
   const value = Array.isArray(source)

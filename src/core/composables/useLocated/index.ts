@@ -1,19 +1,20 @@
+import type { Cartesian3 } from 'cesium'
+import type { MaybeRefOrGetter, Ref } from 'vue'
 import type { MaybeCoordinates } from '~shared/coordinate'
 import type { Nullable } from '~shared/general'
-import type { Cartesian3 } from 'cesium'
 import { toRefs, useElementBounding } from '@vueuse/core'
-import { computed, type MaybeRefOrGetter, type Ref, ref, toValue } from 'vue'
+import { computed, ref, toValue } from 'vue'
 import { toCartesian3, useEventHandler, useViewer } from '~/index'
 
-export type UseLocatedPlacement =
-  | 'topLeft'
-  | 'top'
-  | 'topRight'
-  | 'right'
-  | 'bottomRight'
-  | 'bottom'
-  | 'bottomLeft'
-  | 'left'
+export type UseLocatedPlacement
+  = | 'topLeft'
+    | 'top'
+    | 'topRight'
+    | 'right'
+    | 'bottomRight'
+    | 'bottom'
+    | 'bottomLeft'
+    | 'left'
 
 export interface UseLocatedOptions {
   state: Ref<boolean>

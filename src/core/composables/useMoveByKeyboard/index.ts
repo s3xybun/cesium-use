@@ -1,18 +1,19 @@
+import type { MaybeRef } from 'vue'
 import { useMagicKeys } from '@vueuse/core'
-import { useViewer } from '~composables/useViewer'
-import { isFunction } from '~shared/general'
 import * as Cesium from 'cesium'
+import { toValue, watchEffect } from 'vue'
+import { useViewer } from '~composables/useViewer'
 
-import { type MaybeRef, toValue, watchEffect } from 'vue'
+import { isFunction } from '~shared/general'
 import { useEventHandler } from '../useEventHandler'
 
-export type UseMoveByKeyboardKeybindingList =
-  | 'forward'
-  | 'backward'
-  | 'left'
-  | 'right'
-  | 'down'
-  | 'up'
+export type UseMoveByKeyboardKeybindingList
+  = | 'forward'
+    | 'backward'
+    | 'left'
+    | 'right'
+    | 'down'
+    | 'up'
 export interface UseMoveByKeyboardOptions {
   distancePerFrame?: MaybeRef<number> | ((key: UseMoveByKeyboardKeybindingList) => number)
   keybinding?: Partial<Record<UseMoveByKeyboardKeybindingList, string>>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useViewer } from '~composables/useViewer'
-import { noop } from '~shared/general'
 import * as Cesium from 'cesium'
 import { ref } from 'vue'
+import { useViewer } from '~composables/useViewer'
+import { noop } from '~shared/general'
 import { useEventHandler } from '~/index'
 
 const viewer = useViewer()

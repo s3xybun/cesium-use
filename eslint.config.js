@@ -3,11 +3,10 @@ import antfu from '@antfu/eslint-config'
 export default antfu({
   rules: {
     'no-console': 'off',
-    'eslint-comments/no-unlimited-disable': 'off'
+    'eslint-comments/no-unlimited-disable': 'off',
   },
 }, {
   ignores: [
-    '.vscode/settings.json',
     'src/imports.ts',
   ],
 })

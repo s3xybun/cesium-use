@@ -1,17 +1,19 @@
 import type { Viewer } from 'cesium'
-import { error, throwError } from '~shared/errorHandler'
-import { type Awaitable, isPromise, noop } from '~shared/general'
+import type { InjectionKey, ShallowRef } from 'vue'
+import type { Awaitable } from '~shared/general'
 import {
   getCurrentInstance,
   inject,
-  type InjectionKey,
+
   onMounted,
   provide,
   ref,
-  type ShallowRef,
+
   shallowRef,
   toValue,
 } from 'vue'
+import { error, throwError } from '~shared/errorHandler'
+import { isPromise, noop } from '~shared/general'
 
 // Injection key
 const INJECT_KEY_VIEWER: InjectionKey<ShallowRef<Viewer | undefined>> = Symbol('viewer')

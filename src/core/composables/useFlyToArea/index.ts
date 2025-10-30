@@ -1,7 +1,7 @@
 import type { MaybeCoordinates } from '~shared/coordinate'
+import * as Cesium from 'cesium'
 import { useViewer } from '~composables/useViewer'
 import { toCartesian3 } from '~utils/toCartesian3'
-import * as Cesium from 'cesium'
 
 export interface UseFlyToAreaOptions {
   onSingle: () => void
@@ -31,8 +31,8 @@ export function useFlyToArea(viewer = useViewer()) {
       onSingle
         ? onSingle()
         : viewer.camera.flyTo({
-          destination: toCartesian3(posList[0]),
-        })
+            destination: toCartesian3(posList[0]),
+          })
       return
     }
 

@@ -1,8 +1,8 @@
 import type { MaybeRefOrGetter } from 'vue'
-import { useViewer } from '~composables/useViewer'
-import { throwError } from '~shared/errorHandler'
 import * as Cesium from 'cesium'
 import { toValue, watchEffect } from 'vue'
+import { useViewer } from '~composables/useViewer'
+import { throwError } from '~shared/errorHandler'
 
 // TODO: Type improvement
 export type UsePointsBillboardOptions = Omit<Cesium.Billboard.ConstructorOptions, 'position'>
@@ -18,7 +18,7 @@ export interface UsePointsOptions {
   labelOptions: UsePointsLabelOptions
   onEach?: (
     item: { label: Cesium.Label, billboard: Cesium.Billboard },
-    index: number
+    index: number,
   ) => void
 }
 

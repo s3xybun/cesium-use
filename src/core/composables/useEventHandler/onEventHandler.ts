@@ -5,7 +5,7 @@ export type SetInputActionArgs = Parameters<InstanceType<typeof Cesium.ScreenSpa
 export function onEventHandler(viewer: Cesium.Viewer, disposeHook: ReturnType<typeof createEventHook>) {
   function eventHandler(
     callback: Cesium.ScreenSpaceEventHandler.MotionEventCallback,
-    type: Cesium.ScreenSpaceEventType.MOUSE_MOVE
+    type: Cesium.ScreenSpaceEventType.MOUSE_MOVE,
   ): Cesium.ScreenSpaceEventHandler
 
   function eventHandler(
@@ -13,7 +13,7 @@ export function onEventHandler(viewer: Cesium.Viewer, disposeHook: ReturnType<ty
     type:
       | Cesium.ScreenSpaceEventType.LEFT_CLICK
       | Cesium.ScreenSpaceEventType.RIGHT_CLICK
-      | Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK
+      | Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK,
   ): Cesium.ScreenSpaceEventHandler
 
   function eventHandler(

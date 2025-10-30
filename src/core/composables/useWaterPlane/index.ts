@@ -4,16 +4,16 @@ import { useViewer } from '../useViewer'
 import VERTEX from './VertexShader.glsl?raw'
 import WATER_MATERIAL from './WaterMaterial.glsl?raw'
 
-type OmitProperties =
-  | 'scene'
-  | 'rippleSize'
-  | 'waterColor'
-  | 'waterAlpha'
-  | 'reflectivity'
-  | 'distortionScale'
-  | 'flowDegrees'
-  | 'lightDirection'
-  | 'sunShiny'
+type OmitProperties
+  = | 'scene'
+    | 'rippleSize'
+    | 'waterColor'
+    | 'waterAlpha'
+    | 'reflectivity'
+    | 'distortionScale'
+    | 'flowDegrees'
+    | 'lightDirection'
+    | 'sunShiny'
 
 export type UseWaterPlaneOptions = {
   scene?: Cesium.Scene

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useViewer } from '~composables/useViewer'
 import * as Cesium from 'cesium'
 import { shallowRef } from 'vue'
+import { useViewer } from '~composables/useViewer'
 import { useEventHandler, usePoints } from '~/index'
 import img from './img.png'
 
