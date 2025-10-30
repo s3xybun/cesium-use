@@ -1,6 +1,6 @@
 import type { Viewer } from 'cesium'
-import { type Awaitable, isPromise, noop } from '@s3xysteak/utils'
 import { error, throwError } from '~shared/errorHandler'
+import { type Awaitable, isPromise, noop } from '~shared/general'
 import {
   getCurrentInstance,
   inject,

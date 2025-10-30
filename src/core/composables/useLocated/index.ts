@@ -1,5 +1,5 @@
-import type { Nullable } from '@s3xysteak/utils'
 import type { MaybeCoordinates } from '~shared/coordinate'
+import type { Nullable } from '~shared/general'
 import type { Cartesian3 } from 'cesium'
 import { toRefs, useElementBounding } from '@vueuse/core'
 import { computed, type MaybeRefOrGetter, type Ref, ref, toValue } from 'vue'

@@ -61,11 +61,10 @@
     "vue": "^3.4.0"
   },
   "dependencies": {
-    "@s3xysteak/utils": "^0.9.0",
     "@vueuse/core": "^11.2.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.9.2",
+    "@antfu/eslint-config": "^6.1.0",
     "@tsconfig/node20": "^20.1.4",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.9.1",
@@ -77,7 +76,7 @@
     "bumpp": "^9.8.1",
     "cesium": "^1.127.0",
     "consola": "^3.2.3",
-    "eslint": "^9.15.0",
+    "eslint": "^9.38.0",
     "fs-extra": "^11.2.0",
     "jsdom": "^25.0.1",
     "markdown-it-mathjax3": "^4.3.2",

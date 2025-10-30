@@ -1,4 +1,4 @@
-import { at } from '@s3xysteak/utils'
+import { at } from '~shared/general'
 import * as Cesium from 'cesium'
 import { computed, ref, type Ref, shallowRef, type ShallowRef, watch } from 'vue'
 import { defineColor, editEntity, projectionPosition, syncEntityCollection, toCoordinates, useEventHandler, useViewer } from '~/index'

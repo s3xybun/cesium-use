@@ -1,4 +1,6 @@
-import { isObject } from '@s3xysteak/utils'
+import { isObject } from './fnclip'
+
+export * from './fnclip'
 
 /** merge in 2 depth */
 export function mergeDeep<T extends object = object, S extends object = T>(obj: T, ...args: S[]) {
@@ -16,3 +18,9 @@ export function mergeDeep<T extends object = object, S extends object = T>(obj: 
 export function objectKeys<T extends object>(obj: T): (keyof T)[] {
   return Object.keys(obj) as (keyof T)[]
 }
+
+export function noop() {}
+
+export type Nullable<T> = T | null | undefined
+
+export type Awaitable<T> = T | PromiseLike<T>

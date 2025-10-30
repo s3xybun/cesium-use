@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { noop } from '@s3xysteak/utils'
 import { useViewer } from '~composables/useViewer'
+import { noop } from '~shared/general'
 import * as Cesium from 'cesium'
 import { ref } from 'vue'
 import { useEventHandler } from '~/index'

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Nullable } from '@s3xysteak/utils'
 import type { MaybeCoordinates } from '~shared/coordinate'
+import type { Nullable } from '~shared/general'
 import type { Cartesian3 } from 'cesium'
 import { type Component, ref } from 'vue'
 import { useLocated, type UseLocatedPlacement } from '~/index'

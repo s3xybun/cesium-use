@@ -1,5 +1,5 @@
-import { isUndefined } from '@s3xysteak/utils'
 import { throwError } from '~shared/errorHandler'
+import { isUndefined } from '~shared/general'
 
 /**
  * `[longitude, latitude, height]` or `{ longitude, latitude, height }`

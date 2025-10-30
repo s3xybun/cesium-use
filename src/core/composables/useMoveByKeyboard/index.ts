@@ -1,6 +1,6 @@
-import { isFunction } from '@s3xysteak/utils'
 import { useMagicKeys } from '@vueuse/core'
 import { useViewer } from '~composables/useViewer'
+import { isFunction } from '~shared/general'
 import * as Cesium from 'cesium'
 
 import { type MaybeRef, toValue, watchEffect } from 'vue'

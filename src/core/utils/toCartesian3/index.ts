@@ -1,5 +1,5 @@
-import { isUndefined } from '@s3xysteak/utils'
 import { type MaybeCoordinates, normalizeCoordinates } from '~shared/coordinate'
+import { isUndefined } from '~shared/general'
 import * as Cesium from 'cesium'
 
 type NumberOrString = number | string
