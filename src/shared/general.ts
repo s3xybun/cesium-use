@@ -1,9 +1,9 @@
-import { isObject } from './fnclip'
+import { isObject, objectKeys } from './fnclip'
 
 export * from './fnclip'
 
 /** merge in 2 depth */
-export function mergeDeep<T extends object = object, S extends object = T>(obj: T, ...args: S[]) {
+export function mergeDeep<T extends AnyObject = AnyObject, S extends AnyObject = T>(obj: T, ...args: S[]) {
   return args.reduce((acc, arg) => {
     objectKeys(arg).forEach((key) => {
       if (isObject(arg[key]) && isObject((acc as any)[key]))
@@ -15,12 +15,14 @@ export function mergeDeep<T extends object = object, S extends object = T>(obj: 
   }, obj)
 }
 
-export function objectKeys<T extends object>(obj: T): (keyof T)[] {
-  return Object.keys(obj) as (keyof T)[]
-}
-
 export function noop() {}
 
 export type Nullable<T> = T | null | undefined
 
 export type Awaitable<T> = T | PromiseLike<T>
+
+export type AnyObject = Record<PropertyKey, any>
+
+export function at<T>(arr: T[], index: number) {
+  return arr[index < 0 ? arr.length + index : index]
+}
