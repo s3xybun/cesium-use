@@ -3,17 +3,17 @@
     "target": "ES2020",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "useDefineForClassFields": true,
-    "baseUrl": "./",
     "module": "ESNext",
 
     /* Bundler mode */
     "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
     "paths": {
-      "~/*": ["src/*"],
-      "~components/*": ["src/core/components/*"],
-      "~composables/*": ["src/core/composables/*"],
-      "~utils/*": ["src/core/utils/*"],
-      "~shared/*": ["src/shared/*"]
+      "~/*": ["./src/*"],
+      "~components/*": ["./src/core/components/*"],
+      "~composables/*": ["./src/core/composables/*"],
+      "~utils/*": ["./src/core/utils/*"],
+      "~shared/*": ["./src/shared/*"]
     },
     "resolveJsonModule": true,
     "types": [
@@ -26,6 +26,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "declaration": true,
+    "emitDeclarationOnly": true,
     "declarationDir": "./tsc-types",
     "isolatedModules": true,
     "skipLibCheck": true

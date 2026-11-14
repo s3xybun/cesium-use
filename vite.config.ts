@@ -9,10 +9,10 @@ import ExportCollector from 'unplugin-export-collector/vite'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import { configDefaults } from 'vitest/config'
-import alias from './alias'
-import pkg from './package.json'
+import alias from './alias.ts'
+import pkg from './package.json' with { type: 'json' }
 
-import HandleResolvers from './plugins/resolvers'
+import HandleResolvers from './plugins/resolvers.ts'
 
 export default defineConfig({
   plugins: [
@@ -20,7 +20,7 @@ export default defineConfig({
 
     UnoCSS(),
 
-    dts({ rollupTypes: true }),
+    dts({ bundleTypes: true, entryRoot: 'src', processor: 'vue' }),
     ExportCollector({
       exclude: [
         'Located',
@@ -45,6 +45,7 @@ export default defineConfig({
     ],
   },
   build: {
+    target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14'],
     lib: {
       entry: [
         './src/index.ts',

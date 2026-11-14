@@ -183,7 +183,8 @@ class WaterPrimitive {
 
     // @ts-expect-error Private property
     Cesium.UniformState.prototype.updateFrustum = function (frustum) {
-      Cesium.Matrix4.clone(Cesium.defaultValue(frustum.customProjectionMatrix, frustum.projectionMatrix), this._projection)
+      const { customProjectionMatrix, projectionMatrix } = frustum
+      Cesium.Matrix4.clone(customProjectionMatrix ?? projectionMatrix, this._projection)
       this._inverseProjectionDirty = true
       this._viewProjectionDirty = true
       this._inverseViewProjectionDirty = true
@@ -723,7 +724,7 @@ function render(scene: any, framebuffer: any) {
   frameState.passes.render = true
   frameState.passes.postProcess = scene.postProcessStages.hasSelected
   frameState.tilesetPassState = renderTilesetPassState
-  let backgroundColor = Cesium.defaultValue(scene.backgroundColor, Cesium.Color.BLACK)
+  let backgroundColor = scene.backgroundColor ?? Cesium.Color.BLACK
   if (scene._hdr) {
     backgroundColor = Cesium.Color.clone(backgroundColor, scratchBackgroundColor)
     backgroundColor.red = backgroundColor.red ** scene.gamma
