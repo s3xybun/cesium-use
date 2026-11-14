@@ -13,27 +13,29 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Set node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: lts/*
-          registry-url: 'https://registry.npmjs.org'
 
       - name: Prepare pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
 
       - run: pnpm i
 
       - run: pnpm build
 
       - name: Publish to NPM
-        run: pnpm publish:ci
+        run: |
+          printf '%s\n' '//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}' > "$NPM_CONFIG_USERCONFIG"
+          pnpm publish:ci
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_CONFIG_USERCONFIG: ${{ runner.temp }}/npm-publish.npmrc
           NPM_CONFIG_PROVENANCE: true
 
       - run: npx changelogithub

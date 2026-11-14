@@ -7,7 +7,6 @@
 
     /* Bundler mode */
     "moduleResolution": "Bundler",
-    "allowImportingTsExtensions": true,
     "paths": {
       "~/*": ["./src/*"],
       "~components/*": ["./src/core/components/*"],
@@ -19,6 +18,7 @@
     "types": [
       "vitest/importMeta"
     ],
+    "allowImportingTsExtensions": true,
 
     /* Linting */
     "strict": true,
@@ -26,8 +26,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "declaration": true,
-    "emitDeclarationOnly": true,
     "declarationDir": "./tsc-types",
+    "emitDeclarationOnly": true,
     "isolatedModules": true,
     "skipLibCheck": true
   },

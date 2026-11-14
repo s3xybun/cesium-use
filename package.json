@@ -52,7 +52,7 @@
     "docs:dev": "vitepress dev src",
     "docs:build": "vitepress build src",
     "docs:preview": "vitepress preview src",
-    "publish:ci": "pnpm publish --access public --no-git-checks",
+    "publish:ci": "npm publish --access public",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
@@ -78,7 +78,7 @@
     "bumpp": "^12.3.0",
     "cesium": "^1.147.0",
     "consola": "^3.4.2",
-    "eslint": "^10.14.0",
+    "eslint": "^10.15.0",
     "fs-extra": "^11.4.1",
     "jsdom": "^31.0.1",
     "markdown-it-mathjax3": "^4.3.2",
@@ -95,7 +95,7 @@
     "vitepress": "1.6.4",
     "vitest": "^5.1.0",
     "vue": "^3.5.45",
-    "vue-router": "^5.5.0",
+    "vue-router": "^5.5.1",
     "vue-tsc": "^3.3.14"
   },
   "pnpm": {
