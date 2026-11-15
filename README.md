@@ -11,7 +11,7 @@ Vue powered CesiumJS utility library
 </p>
 
 <p align="center">
-  <a href="https://s3xysteak.github.io/cesium-use/">📚 Document</a>
+  <a href="https://s3xybun.github.io/cesium-use/">📚 Document</a>
 </p>
 
 English | [简体中文](./README-zh.md)
@@ -24,4 +24,4 @@ English | [简体中文](./README-zh.md)
 
 ## License
 
-[MIT](/LICENSE) License © 2024-PRESENT [s3xysteak](https://github.com/s3xysteak/)
+[MIT](/LICENSE) License © 2024-PRESENT [s3xybun](https://github.com/s3xybun/)

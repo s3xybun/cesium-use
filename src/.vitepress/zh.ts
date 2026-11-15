@@ -52,7 +52,7 @@ export const zh = defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/s3xysteak/cesium-use' },
+      { icon: 'github', link: 'https://github.com/s3xybun/cesium-use' },
     ],
   },
 })

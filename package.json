@@ -5,14 +5,14 @@
   "private": false,
   "packageManager": "pnpm@9.14.1",
   "description": "Vue powered CesiumJS utility library",
-  "author": "s3xysteak",
+  "author": "s3xybun",
   "license": "MIT",
-  "homepage": "https://github.com/s3xysteak/cesium-use",
+  "homepage": "https://github.com/s3xybun/cesium-use",
   "repository": {
     "type": "git",
-    "url": "https://github.com/s3xysteak/cesium-use.git"
+    "url": "https://github.com/s3xybun/cesium-use.git"
   },
-  "bugs": "https://github.com/s3xysteak/cesium-use/issues",
+  "bugs": "https://github.com/s3xybun/cesium-use/issues",
   "keywords": [
     "cesium",
     "vue",

@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://s3xysteak.github.io/cesium-use/zh/">📚 文档</a>
+  <a href="https://s3xybun.github.io/cesium-use/zh/">📚 文档</a>
 </p>
 
 [English](./README.md) | 简体中文
@@ -24,4 +24,4 @@
 
 ## License
 
-[MIT](/LICENSE) License ©️ 2024-PRESENT [s3xysteak](https://github.com/s3xysteak/)
+[MIT](/LICENSE) License ©️ 2024-PRESENT [s3xybun](https://github.com/s3xybun/)

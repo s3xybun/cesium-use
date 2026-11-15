@@ -67,7 +67,7 @@ ${types}
 :::`
         : ''
 
-      const URL = 'https://github.com/s3xysteak/cesium-use/blob/main/src/core'
+      const URL = 'https://github.com/s3xybun/cesium-use/blob/main/src/core'
       const existsIndex = fs.existsSync(`${DIR_CORE}/${pkg}/${name}/index.ts`)
 
       const sourceUrl = `${URL}/${pkg}/${name}/index.${existsIndex ? 'ts' : 'vue'}`
